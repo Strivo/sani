@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Dev|Sani — Full Stack Developer specializing in Web Development, AI, and Backend Systems.">
+  <title>Dev|Sani — Full Stack Developer</title>
+
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- CUSTOM CURSOR -->
+<div class="cursor-dot"></div>
+<div class="cursor-outline"></div>
+
+<!-- PROGRESS BAR -->
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="loader-content">
+    <div class="spinner"></div>
+    <p class="loader-text">Loading Experience...</p>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<header class="header-hidden" id="header">
+  <nav>
+    <div class="logo">
+      <span class="logo-bracket">&lt;</span>Dev|Sani<span class="logo-bracket">/&gt;</span>
+    </div>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#services" class="nav-link">Services</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+      <li><button id="themeToggle" aria-label="Toggle theme">🌙</button></li>
+    </ul>
+
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg">
+      <div class="gradient-orb orb-1"></div>
+      <div class="gradient-orb orb-2"></div>
+      <div class="gradient-orb orb-3"></div>
+    </div>
+    
+    <div class="hero-content" data-aos="fade-up">
+      <div class="hero-badge" data-aos="fade-down" data-aos-delay="200">
+        <span class="pulse-dot"></span> Available for Work
+      </div>
+      
+      <h1 class="glitch-text" data-text="Building Digital Experiences That Matter.">
+        Building Digital Experiences That Matter.
+      </h1>
+      
+      <h2 class="typing-wrapper">
+        I am a <span id="typing"></span><span class="cursor">|</span>
+      </h2>
+      
+      <p class="hero-description" data-aos="fade-up" data-aos-delay="400">
+        Transforming complex problems into elegant, scalable solutions through code and creativity.
+      </p>
+      
+      <div class="hero-buttons" data-aos="fade-up" data-aos-delay="600">
+        <button class="hire-btn primary" onclick="scrollToContact()">
+          <span>Let's Talk</span>
+          <i class="fas fa-arrow-right"></i>
+        </button>
+        <button class="hire-btn secondary" onclick="scrollToProjects()">
+          <span>View Work</span>
+        </button>
+      </div>
+
+      <div class="hero-stats" data-aos="fade-up" data-aos-delay="800">
+        <div class="stat">
+          <span class="stat-number" data-target="50">0</span>+
+          <span class="stat-label">Projects</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number" data-target="30">0</span>+
+          <span class="stat-label">Clients</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number" data-target="3">0</span>+
+          <span class="stat-label">Years Exp</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <div class="mouse">
+        <div class="wheel"></div>
+      </div>
+      <p>Scroll to explore</p>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section" data-aos="fade-up">
+    <div class="section-header">
+      <span class="section-tag">About Me</span>
+      <h2>Crafting Digital Excellence</h2>
+    </div>
+    
+    <div class="about-content">
+      <div class="about-image" data-aos="fade-right">
+        <div class="image-frame">
+          <div class="image-placeholder">
+            <i class="fas fa-user"></i>
+          </div>
+          <div class="experience-badge">
+            <span class="exp-number">3+</span>
+            <span class="exp-text">Years<br>Experience</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="about-text" data-aos="fade-left">
+        <p class="lead">
+          I'm <strong>Dev|Sani</strong>, a passionate full stack developer dedicated to building scalable web applications, AI tools, and backend systems that solve real-world problems.
+        </p>
+        <p>
+          My approach combines technical expertise with creative problem-solving. I don't just write code—I craft digital experiences that drive results and delight users.
+        </p>
+        
+        <div class="about-highlights">
+          <div class="highlight">
+            <i class="fas fa-check-circle"></i>
+            <span>Problem Solver</span>
+          </div>
+          <div class="highlight">
+            <i class="fas fa-check-circle"></i>
+            <span>Clean Code Advocate</span>
+          </div>
+          <div class="highlight">
+            <i class="fas fa-check-circle"></i>
+            <span>Continuous Learner</span>
+          </div>
+        </div>
+
+        <a href="#contact" class="cta-link">
+          Start a Project <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="section section-alt" data-aos="fade-up">
+    <div class="section-header">
+      <span class="section-tag">Services</span>
+      <h2>What I Can Do For You</h2>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="service-icon">
+          <i class="fas fa-laptop-code"></i>
+        </div>
+        <h3>Full Stack Development</h3>
+        <p>End-to-end web applications with modern frameworks and scalable architecture.</p>
+        <ul class="service-features">
+          <li>React, Vue, Angular</li>
+          <li>Node.js, Python, PHP</li>
+          <li>Database Design</li>
+        </ul>
+      </div>
+
+      <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-icon">
+          <i class="fas fa-server"></i>
+        </div>
+        <h3>API Development</h3>
+        <p>Robust RESTful and GraphQL APIs built for performance and security.</p>
+        <ul class="service-features">
+          <li>REST & GraphQL</li>
+          <li>Authentication & Security</li>
+          <li>Documentation</li>
+        </ul>
+      </div>
+
+      <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="service-icon">
+          <i class="fas fa-paint-brush"></i>
+        </div>
+        <h3>UI/UX Design</h3>
+        <p>Beautiful, intuitive interfaces that enhance user experience and engagement.</p>
+        <ul class="service-features">
+          <li>Responsive Design</li>
+          <li>Prototyping</li>
+          <li>Design Systems</li>
+        </ul>
+      </div>
+
+      <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+        <div class="service-icon">
+          <i class="fas fa-brain"></i>
+        </div>
+        <h3>AI Integration</h3>
+        <p>Smart solutions powered by machine learning and artificial intelligence.</p>
+        <ul class="service-features">
+          <li>Chatbots & Assistants</li>
+          <li>Data Analysis</li>
+          <li>Automation</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS SECTION - NEW -->
+  <section id="skills" class="section" data-aos="fade-up">
+    <div class="section-header">
+      <span class="section-tag">Expertise</span>
+      <h2>Tech Stack & Tools</h2>
+    </div>
+
+    <div class="skills-container">
+      <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+        <h3>Frontend</h3>
+        <div class="skill-items">
+          <div class="skill-item" data-level="90">
+            <span class="skill-name">HTML/CSS</span>
+            <div class="skill-bar"><div class="skill-progress"></div></div>
+          </div>
+          <div class="skill-item" data-level="85">
+            <span class="skill-name">JavaScript</span>
+            <div class="skill-bar"><div class="skill-progress"></div></div>
+          </div>
+          <div class="skill-item" data-level="80">
+            <span class="skill-name">React</span>
+            <div class="skill-bar"><div class="skill-progress"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+        <h3>Backend</h3>
+        <div class="skill-items">
+          <div class="skill-item" data-level="85">
+            <span class="skill-name">Node.js</span>
+            <div class="skill-bar"><div class="skill-progress"></div></div>
+          </div>
+          <div class="skill-item" data-level="75">
+            <span class="skill-name">Python</span>
+            <div class="skill-bar"><div class="skill-progress"></div></div>
+          </div>
+          <div class="skill-item" data-level="80">
+            <span class="skill-name">Databases</span>
+            <div class="skill-bar"><div class="skill-progress"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+        <h3>Tools & Others</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Git</span>
+          <span class="skill-tag">Docker</span>
+          <span class="skill-tag">AWS</span>
+          <span class="skill-tag">Figma</span>
+          <span class="skill-tag">Linux</span>
+          <span class="skill-tag">Agile</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section section-alt" data-aos="fade-up">
+    <div class="section-header">
+      <span class="section-tag">Portfolio</span>
+      <h2>Featured Projects</h2>
+    </div>
+
+    <div class="project-filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="web">Web App</button>
+      <button class="filter-btn" data-filter="api">API</button>
+      <button class="filter-btn" data-filter="ai">AI/ML</button>
+    </div>
+
+    <div class="project-grid">
+      <div class="project-card" data-category="web" data-aos="fade-up" data-aos-delay="100">
+        <div class="project-image">
+          <div class="project-overlay">
+            <button class="view-project" onclick="openModal('Weather Intelligence App','Real-time weather dashboard powered by API integration with location-based forecasts and interactive maps.','React, Node.js, OpenWeather API','https://github.com')">
+              <i class="fas fa-eye"></i> View Details
+            </button>
+          </div>
+          <div class="project-placeholder">
+            <i class="fas fa-cloud-sun"></i>
+          </div>
+        </div>
+        <div class="project-info">
+          <span class="project-category">Web Application</span>
+          <h3>Weather Intelligence App</h3>
+          <p>Real-time weather dashboard with predictive analytics</p>
+          <div class="project-tech">
+            <span>React</span>
+            <span>Node.js</span>
+            <span>API</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card" data-category="api" data-aos="fade-up" data-aos-delay="200">
+        <div class="project-image">
+          <div class="project-overlay">
+            <button class="view-project" onclick="openModal('Node.js REST API','Scalable backend server with authentication system, rate limiting, and comprehensive API documentation.','Node.js, Express, MongoDB, JWT','https://github.com')">
+              <i class="fas fa-eye"></i> View Details
+            </button>
+          </div>
+          <div class="project-placeholder">
+            <i class="fas fa-server"></i>
+          </div>
+        </div>
+        <div class="project-info">
+          <span class="project-category">Backend API</span>
+          <h3>Enterprise REST API</h3>
+          <p>Scalable backend with auth and security features</p>
+          <div class="project-tech">
+            <span>Node.js</span>
+            <span>MongoDB</span>
+            <span>JWT</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card" data-category="ai" data-aos="fade-up" data-aos-delay="300">
+        <div class="project-image">
+          <div class="project-overlay">
+            <button class="view-project" onclick="openModal('AI Assistant Tool','Smart AI-powered assistant for productivity tasks with natural language processing and task automation.','Python, TensorFlow, NLP, React','https://github.com')">
+              <i class="fas fa-eye"></i> View Details
+            </button>
+          </div>
+          <div class="project-placeholder">
+            <i class="fas fa-robot"></i>
+          </div>
+        </div>
+        <div class="project-info">
+          <span class="project-category">AI/ML</span>
+          <h3>AI Productivity Assistant</h3>
+          <p>Intelligent task management with NLP capabilities</p>
+          <div class="project-tech">
+            <span>Python</span>
+            <span>TensorFlow</span>
+            <span>NLP</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" class="section" data-aos="fade-up">
+    <div class="section-header">
+      <span class="section-tag">Testimonials</span>
+      <h2>Client Success Stories</h2>
+    </div>
+
+    <div class="testimonials-container">
+      <div class="testimonial-slider" id="testimonialSlider">
+        <div class="testimonial-slide active">
+          <div class="testimonial-content">
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <blockquote>
+              "Dev|Sani delivered beyond expectations. Fast, professional and clean code. The attention to detail and problem-solving skills are exceptional."
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="author-avatar">
+                <i class="fas fa-user"></i>
+              </div>
+              <div class="author-info">
+                <h4>John Smith</h4>
+                <span>CEO, TechStart Inc.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-slide">
+          <div class="testimonial-content">
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <blockquote>
+              "Working with Sani was a game-changer for our startup. The backend architecture he built handled 10x our expected traffic without breaking a sweat."
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="author-avatar">
+                <i class="fas fa-user"></i>
+              </div>
+              <div class="author-info">
+                <h4>Sarah Johnson</h4>
+                <span>CTO, DataFlow Systems</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-slide">
+          <div class="testimonial-content">
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <blockquote>
+              "Not just a developer, but a true partner in our digital transformation. Highly recommended for any complex project."
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="author-avatar">
+                <i class="fas fa-user"></i>
+              </div>
+              <div class="author-info">
+                <h4>Michael Chen</h4>
+                <span>Director, Global Solutions</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-controls">
+        <button class="testimonial-btn prev" onclick="changeTestimonial(-1)">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <div class="testimonial-dots" id="testimonialDots"></div>
+        <button class="testimonial-btn next" onclick="changeTestimonial(1)">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section section-alt" data-aos="fade-up">
+    <div class="section-header">
+      <span class="section-tag">Contact</span>
+      <h2>Let's Build Something Powerful</h2>
+      <p class="section-subtitle">Have a project in mind? Let's create something amazing together.</p>
+    </div>
+
+    <div class="contact-container">
+      <div class="contact-info-card" data-aos="fade-right">
+        <h3>Get In Touch</h3>
+        <p>I'm currently available for freelance work and open to new opportunities.</p>
+        
+        <div class="contact-methods">
+          <div class="contact-method">
+            <div class="method-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="method-details">
+              <span class="method-label">Email</span>
+              <a href="mailto:saniavdoull56@gmail.com">saniavdoull56@gmail.com</a>
+            </div>
+          </div>
+          
+          <div class="contact-method">
+            <div class="method-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div class="method-details">
+              <span class="method-label">Phone</span>
+              <a href="tel:+2347043939403">+234-70439-39403</a>
+            </div>
+          </div>
+          
+          <div class="contact-method">
+            <div class="method-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="method-details">
+              <span class="method-label">Location</span>
+              <span>Available Worldwide (Remote)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="social-links">
+          <a href="https://github.com/goldenimowire" target="_blank" class="social-link" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://linkedin.com/in/sani-avdoull-700252284" target="_blank" class="social-link" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://twitter.com" target="_blank" class="social-link" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://discord.com" target="_blank" class="social-link" aria-label="Discord">
+            <i class="fab fa-discord"></i>
+          </a>
+        </div>
+      </div>
+
+      <form id="contactForm" class="contact-form" data-aos="fade-left">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" placeholder="John Doe" required>
+          <i class="fas fa-user input-icon"></i>
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="john@example.com" required>
+          <i class="fas fa-envelope input-icon"></i>
+        </div>
+        
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" placeholder="Project Inquiry" required>
+          <i class="fas fa-tag input-icon"></i>
+        </div>
+        
+        <div class="form-group">
+          <label for="message">Your Message</label>
+          <textarea id="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+          <i class="fas fa-comment input-icon textarea-icon"></i>
+        </div>
+
+        <button type="submit" class="submit-btn">
+          <span class="btn-text">Send Message</span>
+          <span class="btn-loader">
+            <i class="fas fa-spinner fa-spin"></i>
+          </span>
+          <span class="btn-success">
+            <i class="fas fa-check"></i> Sent!
+          </span>
+        </button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-brand">
+      <div class="logo">
+        <span class="logo-bracket">&lt;</span>Dev|Sani<span class="logo-bracket">/&gt;</span>
+      </div>
+      <p>Building digital experiences that matter.</p>
+    </div>
+    
+    <div class="footer-links">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+  
+  <div class="footer-bottom">
+    <p>&copy; 2026 Dev|Sani. All rights reserved.</p>
+    <p class="made-with">Made with <i class="fas fa-heart pulse"></i> and lots of <i class="fas fa-coffee"></i></p>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal()" aria-label="Close modal">
+      <i class="fas fa-times"></i>
+    </button>
+    <div class="modal-header">
+      <span class="modal-category">Project Details</span>
+      <h3 id="modalTitle"></h3>
+    </div>
+    <div class="modal-body">
+      <p id="modalDesc"></p>
+      <div class="modal-tech">
+        <h4>Technologies Used:</h4>
+        <p id="modalTech"></p>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a href="#" id="modalLink" target="_blank" class="modal-btn primary">
+        <i class="fab fa-github"></i> View Code
+      </a>
+      <button class="modal-btn secondary" onclick="closeModal()">Close</button>
+    </div>
+  </div>
+</div>
+
+<!-- NOTIFICATION TOAST -->
+<div id="toast" class="toast">
+  <i class="fas fa-check-circle"></i>
+  <span id="toastMessage">Message sent successfully!</span>
+</div>
+
+<!-- BACK TO TOP -->
+<button id="backToTop" class="back-to-top" aria-label="Back to top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+<script src="./script.js"></script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true,
+    offset: 100,
+    easing: 'ease-out-cubic'
+  });
+</script>
+
+</body>
+</html>
